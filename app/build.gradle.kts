@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ycngmn.notubetv"
+        applicationId = "com.notube.tv"
         minSdk = 24
         targetSdk = 35
         versionCode = 3
