@@ -1,11 +1,11 @@
-package com.ycngmn.notubetv.ui.theme
-
+package com.github.libretube.ui.theme
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFF000000)
-val PurpleGrey80 = Color(0xFF000000)
-val Pink80 = Color(0xFF000000)
+val PrimaryRed = Color(0xFFE50914)
+val PureBlack = Color(0xFF000000)
+val DarkGrey = Color(0xFF121212)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF000000)
+val md_theme_dark_primary = PrimaryRed
+val md_theme_dark_onPrimary = Color.White
+val md_theme_dark_background = PureBlack
+val md_theme_dark_surface = DarkGrey
