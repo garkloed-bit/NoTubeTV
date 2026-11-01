@@ -1,4 +1,4 @@
-name: Build NoTubeTV
+name: Build BackdorTube
 on:
   push:
     branches: [ "main", "master" ]
@@ -19,5 +19,5 @@ jobs:
           ./gradlew assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
-          name: NoTubeTV-Debug-APK
+          name: BackdorTube-Debug
           path: app/build/outputs/apk/debug/*.apk
