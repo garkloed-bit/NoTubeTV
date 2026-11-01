@@ -1,7 +1,6 @@
 package com.ycngmn.notubetv.ui.theme
 import androidx.compose.ui.graphics.Color
 
-// Netflix Red & Black Theme
 val Purple80 = Color(0xFFE50914)
 val PurpleGrey80 = Color(0xFF000000)
 val Pink80 = Color(0xFFE50914)
