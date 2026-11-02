@@ -29,9 +29,7 @@ import com.ycngmn.notubetv.R
 
 @Composable
 fun SplashLoading(progress: Float) {
-
-    val animatedProgress by
-    animateFloatAsState(
+    val animatedProgress by animateFloatAsState(
         targetValue = (progress * 1.5F),
         animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
     )
