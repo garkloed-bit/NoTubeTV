@@ -5,9 +5,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.darkColorScheme
 
-val NetflixRed = Color(0xFFE50914)
-val AmoledBlack = Color(0xFF000000)
-
 private val MasterDarkColorScheme = darkColorScheme(
     primary = NetflixRed,
     onPrimary = Color.White,

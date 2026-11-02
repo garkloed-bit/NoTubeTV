@@ -33,48 +33,13 @@ fun SplashLoading(progress: Float) {
         targetValue = (progress * 1.5F),
         animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
     )
-
-    Box(
-        Modifier
-            .fillMaxSize()
-            .background(Color(0xFF000000))
-    ) {
-        Column(
-            modifier = Modifier.align(Alignment.Center),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(bottom = 80.dp)
-            ) {
-                Text(
-                    text = "BackdorTube",
-                    color = Color(0xFFE50914),
-                    fontSize = 42.sp,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-            Row(
-                modifier = Modifier.fillMaxWidth(0.6F),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.toys_fan_24px),
-                    contentDescription = null,
-                    tint = Color(0xFFE50914),
-                    modifier = Modifier.size(26.dp)
-                )
-
+    Box(Modifier.fillMaxSize().background(Color(0xFF000000))) {
+        Column(modifier = Modifier.align(Alignment.Center), horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(text = "BackdorTube", color = Color(0xFFE50914), fontSize = 42.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 80.dp))
+            Row(modifier = Modifier.fillMaxWidth(0.6F), verticalAlignment = Alignment.CenterVertically) {
+                Icon(painter = painterResource(R.drawable.toys_fan_24px), contentDescription = null, tint = Color(0xFFE50914), modifier = Modifier.size(26.dp))
                 Spacer(Modifier.width(8.dp))
-
-                LinearProgressIndicator(
-                    progress = { animatedProgress },
-                    modifier = Modifier.weight(1F),
-                    color = Color(0xFFE50914),
-                    trackColor = Color(0xFF222222),
-                    gapSize = 0.dp,
-                    strokeCap = StrokeCap.Square
-                )
+                LinearProgressIndicator(progress = { animatedProgress }, modifier = Modifier.weight(1F), color = Color(0xFFE50914), trackColor = Color(0xFF222222), strokeCap = StrokeCap.Square)
             }
         }
     }
