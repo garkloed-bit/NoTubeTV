@@ -1,7 +1,6 @@
 package com.ycngmn.notubetv.ui.screens
 
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,6 +14,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.ProgressIndicatorDefaults
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -22,7 +22,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.ycngmn.notubetv.R
 
 @Composable
@@ -37,17 +39,23 @@ fun SplashLoading(progress: Float) {
     Box(
         Modifier
             .fillMaxSize()
-            .background(Color(0XFF0B0B0B))
+            .background(Color(0xFF000000))
     ) {
         Column(
             modifier = Modifier.align(Alignment.Center),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Image(
-                painter = painterResource(R.drawable.banner_fg),
-                contentDescription = null,
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(bottom = 80.dp)
-            )
+            ) {
+                Text(
+                    text = "BackdorTube",
+                    color = Color(0xFFE50914),
+                    fontSize = 42.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
             Row(
                 modifier = Modifier.fillMaxWidth(0.6F),
                 verticalAlignment = Alignment.CenterVertically
@@ -55,7 +63,7 @@ fun SplashLoading(progress: Float) {
                 Icon(
                     painter = painterResource(R.drawable.toys_fan_24px),
                     contentDescription = null,
-                    tint = Color.White,
+                    tint = Color(0xFFE50914),
                     modifier = Modifier.size(26.dp)
                 )
 
@@ -64,13 +72,12 @@ fun SplashLoading(progress: Float) {
                 LinearProgressIndicator(
                     progress = { animatedProgress },
                     modifier = Modifier.weight(1F),
-                    color = Color(0XFFFF0000),
-                    trackColor = Color.LightGray,
+                    color = Color(0xFFE50914),
+                    trackColor = Color(0xFF222222),
                     gapSize = 0.dp,
                     strokeCap = StrokeCap.Square
                 )
             }
         }
     }
-
 }
