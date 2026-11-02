@@ -1,31 +1,28 @@
 package com.ycngmn.notubetv.ui.theme
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.darkColorScheme
+import androidx.tv.material3.Typography
 
 private val MasterDarkColorScheme = darkColorScheme(
-    primary = NetflixRed,
+    primary = Color(0xFFE50914),
     onPrimary = Color.White,
-    secondary = NetflixRed,
+    secondary = Color(0xFFE50914),
     onSecondary = Color.White,
-    background = AmoledBlack,
+    background = Color(0xFF000000),
     onBackground = Color.White,
-    surface = AmoledBlack,
+    surface = Color(0xFF000000),
     onSurface = Color.White,
     surfaceVariant = Color(0xFF121212),
     onSurfaceVariant = Color.White,
-    border = NetflixRed
+    border = Color(0xFFE50914)
 )
 
 @Composable
-fun NoTubeTVTheme(
-    content: @Composable () -> Unit
-) {
+fun NoTubeTVTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = MasterDarkColorScheme,
-        typography = Typography,
         content = content
     )
 }
